@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/matt-e/go-adb/internal/errors"
-	"github.com/matt-e/go-adb/wire"
+	"github.com/visakai/sk-adb/internal/errors"
+	"github.com/visakai/sk-adb/wire"
 )
 
 // MtimeOfClose should be passed to OpenWrite to set the file modification time to the time the Close
@@ -191,6 +191,7 @@ func (c *Device) DeviceInfo() (*DeviceInfo, error) {
 RunCommand runs the specified commands on a shell on the device.
 
 From the Android docs:
+
 	Run 'command arg1 arg2 ...' in a shell on the device, and return
 	its output and error streams. Note that arguments must be separated
 	by spaces. If an argument contains a space, it must be quoted with
@@ -198,6 +199,7 @@ From the Android docs:
 	will go very wrong.
 
 	Note that this is the non-interactive version of "adb shell"
+
 Source: https://android.googlesource.com/platform/system/core/+/master/adb/SERVICES.TXT
 
 This method quotes the arguments for you, and will return an error if any of them
@@ -250,11 +252,13 @@ func (c *Device) OpenCommand(cmd string, args ...string) (conn *wire.Conn, err e
 
 /*
 Remount, from the official adb command’s docs:
+
 	Ask adbd to remount the device's filesystem in read-write mode,
 	instead of read-only. This is usually necessary before performing
 	an "adb sync" or "adb push" request.
 	This request may not succeed on certain builds which do not allow
 	that.
+
 Source: https://android.googlesource.com/platform/system/core/+/master/adb/SERVICES.TXT
 */
 func (c *Device) Remount() (string, error) {

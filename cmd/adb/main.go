@@ -10,7 +10,7 @@ import (
 
 	"github.com/alecthomas/kingpin"
 	"github.com/cheggaaa/pb"
-	"github.com/matt-e/go-adb"
+	"github.com/visakai/sk-adb"
 )
 
 const StdIoFilename = "-"

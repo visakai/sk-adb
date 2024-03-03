@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"strings"
 
-	"github.com/matt-e/go-adb/internal/errors"
+	"github.com/visakai/sk-adb/internal/errors"
 )
 
 type DeviceInfo struct {

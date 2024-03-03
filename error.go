@@ -1,6 +1,6 @@
 package adb
 
-import "github.com/matt-e/go-adb/internal/errors"
+import "github.com/visakai/sk-adb/internal/errors"
 import sysErrors "errors"
 
 type ErrCode errors.ErrCode

@@ -1,4 +1,4 @@
-module github.com/matt-e/go-adb
+module github.com/visakai/sk-adb
 
 go 1.21.6
 

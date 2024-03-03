@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/matt-e/go-adb/wire"
 	"github.com/stretchr/testify/assert"
+	"github.com/visakai/sk-adb/wire"
 )
 
 func TestNewServer_ZeroConfig(t *testing.T) {

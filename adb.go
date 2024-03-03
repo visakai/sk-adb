@@ -3,8 +3,8 @@ package adb
 import (
 	"strconv"
 
-	"github.com/matt-e/go-adb/internal/errors"
-	"github.com/matt-e/go-adb/wire"
+	"github.com/visakai/sk-adb/internal/errors"
+	"github.com/visakai/sk-adb/wire"
 )
 
 /*
@@ -74,6 +74,7 @@ func (c *Adb) ServerVersion() (int, error) {
 KillServer tells the server to quit immediately.
 
 Corresponds to the command:
+
 	adb kill-server
 */
 func (c *Adb) KillServer() error {
@@ -94,6 +95,7 @@ func (c *Adb) KillServer() error {
 ListDeviceSerials returns the serial numbers of all attached devices.
 
 Corresponds to the command:
+
 	adb devices
 */
 func (c *Adb) ListDeviceSerials() ([]string, error) {
@@ -118,6 +120,7 @@ func (c *Adb) ListDeviceSerials() ([]string, error) {
 ListDevices returns the list of connected devices.
 
 Corresponds to the command:
+
 	adb devices -l
 */
 func (c *Adb) ListDevices() ([]*DeviceInfo, error) {

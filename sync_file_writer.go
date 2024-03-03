@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/matt-e/go-adb/internal/errors"
-	"github.com/matt-e/go-adb/wire"
+	"github.com/visakai/sk-adb/internal/errors"
+	"github.com/visakai/sk-adb/wire"
 )
 
 // syncFileWriter wraps a SyncConn that has requested to send a file.
@@ -33,6 +33,7 @@ func newSyncFileWriter(s wire.SyncSender, mtime time.Time) io.WriteCloser {
 encodePathAndMode encodes a path and file mode as required for starting a send file stream.
 
 From https://android.googlesource.com/platform/system/core/+/master/adb/SYNC.TXT:
+
 	The remote file name is split into two parts separated by the last
 	comma (","). The first part is the actual path, while the second is a decimal
 	encoded file mode containing the permissions of the file on device.

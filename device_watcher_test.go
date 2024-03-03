@@ -3,9 +3,9 @@ package adb
 import (
 	"testing"
 
-	"github.com/matt-e/go-adb/internal/errors"
-	"github.com/matt-e/go-adb/wire"
 	"github.com/stretchr/testify/assert"
+	"github.com/visakai/sk-adb/internal/errors"
+	"github.com/visakai/sk-adb/wire"
 )
 
 func TestParseDeviceStatesSingle(t *testing.T) {
